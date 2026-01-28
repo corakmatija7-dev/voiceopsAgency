@@ -81,6 +81,7 @@
             </div>
 
             <div class="hidden md:flex items-center gap-8">
+                <a href="#voices" class="text-xs font-medium text-white/60 hover:text-white transition-colors">Voices</a>
                 <a href="#features" class="text-xs font-medium text-white/60 hover:text-white transition-colors">Features</a>
                 <a href="#services" class="text-xs font-medium text-white/60 hover:text-white transition-colors">Services</a>
                 <a href="#about" class="text-xs font-medium text-white/60 hover:text-white transition-colors">About</a>
@@ -197,6 +198,100 @@
 
         </section>
 
+        <!-- Voice Samples Section -->
+        <section id="voices" class="max-w-6xl mx-auto px-6 mt-32">
+            <h2 class="text-3xl font-semibold tracking-tight text-center mb-4">Hear our AI voices</h2>
+            <p class="text-sm text-white/40 text-center mb-12 max-w-xl mx-auto">Experience the natural, human-like quality of our AI voice agents. Click to play a sample.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Voice 1 - Sarah -->
+                <div class="voice-card group relative p-[1px] rounded-2xl bg-gradient-to-b from-white/10 to-transparent hover:from-purple-500/50 hover:to-rose-500/50 transition-all duration-500 cursor-pointer" onclick="playVoice('sarah')">
+                    <div class="relative h-full bg-[#080808] rounded-2xl p-6 overflow-hidden">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                                <iconify-icon icon="solar:user-rounded-bold" class="text-white text-xl"></iconify-icon>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-medium text-white">Sarah</h3>
+                                <p class="text-xs text-white/50">Friendly & Professional</p>
+                            </div>
+                            <button class="ml-auto w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors play-btn" data-voice="sarah">
+                                <iconify-icon icon="solar:play-bold" class="text-white text-lg translate-x-0.5" id="sarah-icon"></iconify-icon>
+                            </button>
+                        </div>
+                        <p class="text-xs text-white/60 leading-relaxed">
+                            "Hi there! Thank you for calling. I'd be happy to help you schedule an appointment or answer any questions you might have."
+                        </p>
+                        <div class="mt-4 flex items-center gap-2">
+                            <span class="px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300 text-[10px]">Healthcare</span>
+                            <span class="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 text-[10px]">US English</span>
+                        </div>
+                    </div>
+                    <audio id="audio-sarah" preload="auto">
+                        <source src="https://cdn.jsdelivr.net/gh/nicerr11/public-audio@main/sarah-demo.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <!-- Voice 2 - James -->
+                <div class="voice-card group relative p-[1px] rounded-2xl bg-gradient-to-b from-white/10 to-transparent hover:from-purple-500/50 hover:to-rose-500/50 transition-all duration-500 cursor-pointer" onclick="playVoice('james')">
+                    <div class="relative h-full bg-[#080808] rounded-2xl p-6 overflow-hidden">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                                <iconify-icon icon="solar:user-rounded-bold" class="text-white text-xl"></iconify-icon>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-medium text-white">James</h3>
+                                <p class="text-xs text-white/50">Calm & Reassuring</p>
+                            </div>
+                            <button class="ml-auto w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors play-btn" data-voice="james">
+                                <iconify-icon icon="solar:play-bold" class="text-white text-lg translate-x-0.5" id="james-icon"></iconify-icon>
+                            </button>
+                        </div>
+                        <p class="text-xs text-white/60 leading-relaxed">
+                            "Good morning. I'm here to assist you with your appointment. Let me check our available times for you."
+                        </p>
+                        <div class="mt-4 flex items-center gap-2">
+                            <span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-[10px]">Medical</span>
+                            <span class="px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 text-[10px]">US English</span>
+                        </div>
+                    </div>
+                    <audio id="audio-james" preload="auto">
+                        <source src="https://cdn.jsdelivr.net/gh/nicerr11/public-audio@main/james-demo.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <!-- Voice 3 - Emma -->
+                <div class="voice-card group relative p-[1px] rounded-2xl bg-gradient-to-b from-white/10 to-transparent hover:from-purple-500/50 hover:to-rose-500/50 transition-all duration-500 cursor-pointer" onclick="playVoice('emma')">
+                    <div class="relative h-full bg-[#080808] rounded-2xl p-6 overflow-hidden">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-rose-500 to-orange-500 flex items-center justify-center">
+                                <iconify-icon icon="solar:user-rounded-bold" class="text-white text-xl"></iconify-icon>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-medium text-white">Emma</h3>
+                                <p class="text-xs text-white/50">Warm & Empathetic</p>
+                            </div>
+                            <button class="ml-auto w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors play-btn" data-voice="emma">
+                                <iconify-icon icon="solar:play-bold" class="text-white text-lg translate-x-0.5" id="emma-icon"></iconify-icon>
+                            </button>
+                        </div>
+                        <p class="text-xs text-white/60 leading-relaxed">
+                            "Hello! I completely understand. Let me help you find the best solution for your needs today."
+                        </p>
+                        <div class="mt-4 flex items-center gap-2">
+                            <span class="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 text-[10px]">Support</span>
+                            <span class="px-2 py-0.5 rounded-full bg-orange-500/20 text-orange-300 text-[10px]">UK English</span>
+                        </div>
+                    </div>
+                    <audio id="audio-emma" preload="auto">
+                        <source src="https://cdn.jsdelivr.net/gh/nicerr11/public-audio@main/emma-demo.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+
+            <p class="text-xs text-white/30 text-center mt-8">We can customize voices to match your brand's personality and tone.</p>
+        </section>
+
         <!-- Features Grid -->
         <section id="features" class="max-w-6xl mx-auto px-6 mt-32">
             <h2 class="text-3xl font-semibold tracking-tight text-center mb-16">Why choose VoiceOps?</h2>
@@ -244,14 +339,19 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="max-w-6xl mx-auto px-6 mt-32 mb-20">
+        <section id="services" class="max-w-6xl mx-auto px-6 mt-32">
+            <h2 class="text-3xl font-semibold tracking-tight text-center mb-4">Our Services</h2>
+            <p class="text-sm text-white/40 text-center mb-12 max-w-2xl mx-auto">
+                VoiceOps is an AI voice agency that brings cutting-edge voice assistant technology to healthcare providers, clinics, dental offices, and businesses that need reliable 24/7 customer communication. We handle the entire process from setup to deployment.
+            </p>
+
             <div class="relative rounded-3xl border border-white/10 bg-[#080808] overflow-hidden">
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2">
                     <div class="p-12 border-b lg:border-b-0 lg:border-r border-white/5">
-                        <h2 class="text-2xl font-semibold tracking-tight mb-4">How we help your business</h2>
-                        <p class="text-sm text-white/50 mb-8">We deploy custom AI voice agents tailored to your specific needs and workflows.</p>
+                        <h3 class="text-xl font-semibold tracking-tight mb-4">What we deliver</h3>
+                        <p class="text-sm text-white/50 mb-8">We deploy fully customized AI voice agents tailored to your specific industry, workflows, and brand voice. No technical expertise required on your end.</p>
 
                         <!-- Services List -->
                         <div class="space-y-6">
@@ -261,7 +361,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-medium text-white mb-1">Appointment Scheduling</h4>
-                                    <p class="text-xs text-white/50">Automated booking and reminders for clinics and service businesses.</p>
+                                    <p class="text-xs text-white/50">Automated booking, rescheduling, and reminders. Integrates with your existing calendar systems. Perfect for medical offices and clinics.</p>
                                 </div>
                             </div>
 
@@ -271,7 +371,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-medium text-white mb-1">Inbound Call Handling</h4>
-                                    <p class="text-xs text-white/50">Answer calls, route inquiries, and provide information 24/7.</p>
+                                    <p class="text-xs text-white/50">Never miss a call again. Our AI answers instantly, handles inquiries, collects information, and routes urgent calls to your team.</p>
                                 </div>
                             </div>
 
@@ -280,8 +380,18 @@
                                     <iconify-icon icon="solar:users-group-rounded-linear" class="text-indigo-400" stroke-width="1.5"></iconify-icon>
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-medium text-white mb-1">Patient/Customer Support</h4>
-                                    <p class="text-xs text-white/50">Handle FAQs, provide updates, and escalate when needed.</p>
+                                    <h4 class="text-sm font-medium text-white mb-1">Patient & Customer Support</h4>
+                                    <p class="text-xs text-white/50">Handle FAQs, provide business information, process simple requests, and seamlessly escalate complex issues to human staff.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center shrink-0">
+                                    <iconify-icon icon="solar:settings-linear" class="text-green-400" stroke-width="1.5"></iconify-icon>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-white mb-1">Full Setup & Integration</h4>
+                                    <p class="text-xs text-white/50">We handle everything: voice customization, script writing, phone system integration, and ongoing optimization. You focus on your business.</p>
                                 </div>
                             </div>
                         </div>
@@ -313,10 +423,62 @@
             </div>
         </section>
 
+        <!-- About Section -->
+        <section id="about" class="max-w-6xl mx-auto px-6 mt-32 mb-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-semibold tracking-tight mb-6">About VoiceOps</h2>
+                    <div class="space-y-4 text-sm text-white/60 leading-relaxed">
+                        <p>
+                            <span class="text-white font-medium">VoiceOps</span> is an AI voice agency dedicated to bringing intelligent voice assistant technology to businesses that need it most. We specialize in healthcare, dental practices, clinics, and professional services.
+                        </p>
+                        <p>
+                            We understand that missed calls mean missed opportunities. That's why we've built a service that ensures your customers always reach a helpful, professional voice - whether it's 2 PM or 2 AM.
+                        </p>
+                        <p>
+                            Our AI voice agents are designed to sound natural, understand context, and handle real conversations. They can schedule appointments, answer questions, take messages, and seamlessly transfer to your team when needed.
+                        </p>
+                        <p>
+                            We handle the entire process: from understanding your business needs, to customizing the voice and scripts, to integrating with your phone systems. You get a turnkey solution that works from day one.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative rounded-2xl border border-white/10 bg-[#080808] p-8 overflow-hidden">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
+                        <div class="relative space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center">
+                                    <iconify-icon icon="solar:target-linear" class="text-purple-400 text-2xl" stroke-width="1.5"></iconify-icon>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white">Our Mission</h4>
+                                    <p class="text-xs text-white/50">Making AI accessible for every business</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-white/60 leading-relaxed">
+                                To empower clinics, healthcare providers, and businesses with AI voice technology that improves customer experience, reduces missed calls, and frees up staff to focus on what matters most - serving their clients.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                                <div>
+                                    <div class="text-2xl font-semibold text-white">24/7</div>
+                                    <div class="text-xs text-white/40">Always Available</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-semibold text-white">100%</div>
+                                    <div class="text-xs text-white/40">Calls Answered</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
-    <footer id="about" class="border-t border-white/5 bg-black py-12">
+    <footer class="border-t border-white/5 bg-black py-12">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-8">
             <div class="flex flex-col gap-4">
                 <div class="flex items-center gap-2">
@@ -357,6 +519,97 @@
             </div>
         </div>
     </footer>
+
+    <!-- Audio Playback Script -->
+    <script>
+        let currentAudio = null;
+        let currentVoice = null;
+
+        // Voice sample texts for Web Speech API fallback
+        const voiceTexts = {
+            sarah: "Hi there! Thank you for calling. I'd be happy to help you schedule an appointment or answer any questions you might have.",
+            james: "Good morning. I'm here to assist you with your appointment. Let me check our available times for you.",
+            emma: "Hello! I completely understand. Let me help you find the best solution for your needs today."
+        };
+
+        function playVoice(voice) {
+            // Stop any currently playing audio
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                updateIcon(currentVoice, 'play');
+            }
+
+            // If clicking the same voice, just stop
+            if (currentVoice === voice) {
+                currentVoice = null;
+                currentAudio = null;
+                return;
+            }
+
+            const audio = document.getElementById('audio-' + voice);
+
+            // Try to play the audio file first
+            audio.play().then(() => {
+                currentAudio = audio;
+                currentVoice = voice;
+                updateIcon(voice, 'pause');
+
+                audio.onended = () => {
+                    updateIcon(voice, 'play');
+                    currentVoice = null;
+                    currentAudio = null;
+                };
+            }).catch(() => {
+                // Fallback to Web Speech API if audio file fails
+                useSpeechSynthesis(voice);
+            });
+        }
+
+        function useSpeechSynthesis(voice) {
+            if ('speechSynthesis' in window) {
+                // Cancel any ongoing speech
+                window.speechSynthesis.cancel();
+
+                const utterance = new SpeechSynthesisUtterance(voiceTexts[voice]);
+                utterance.rate = 0.9;
+                utterance.pitch = voice === 'james' ? 0.8 : 1.1;
+
+                // Try to get a good voice
+                const voices = window.speechSynthesis.getVoices();
+                const preferredVoice = voices.find(v =>
+                    v.lang.startsWith('en') &&
+                    (voice === 'james' ? v.name.toLowerCase().includes('male') : v.name.toLowerCase().includes('female'))
+                ) || voices.find(v => v.lang.startsWith('en'));
+
+                if (preferredVoice) {
+                    utterance.voice = preferredVoice;
+                }
+
+                currentVoice = voice;
+                updateIcon(voice, 'pause');
+
+                utterance.onend = () => {
+                    updateIcon(voice, 'play');
+                    currentVoice = null;
+                };
+
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        function updateIcon(voice, state) {
+            const icon = document.getElementById(voice + '-icon');
+            if (icon) {
+                icon.setAttribute('icon', state === 'play' ? 'solar:play-bold' : 'solar:pause-bold');
+            }
+        }
+
+        // Preload voices for Web Speech API
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.getVoices();
+        }
+    </script>
 
 </body>
 </html>
