@@ -73,12 +73,12 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
         <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-            <div class="flex items-center gap-2 group cursor-pointer">
+            <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="flex items-center gap-2 group cursor-pointer">
                 <div class="relative flex items-center justify-center w-6 h-6 bg-gradient-to-tr from-purple-600 to-rose-600 rounded-md shadow-lg shadow-purple-900/20">
                     <iconify-icon icon="solar:soundwave-linear" class="text-white text-sm" stroke-width="1.5"></iconify-icon>
                 </div>
                 <span class="font-semibold tracking-tight text-sm text-white/90 group-hover:text-white transition-colors">VoiceOps</span>
-            </div>
+            </a>
 
             <div class="hidden md:flex items-center gap-8">
                 <a href="#voices" class="text-xs font-medium text-white/60 hover:text-white transition-colors">Voices</a>
@@ -203,7 +203,7 @@
             <h2 class="text-3xl font-semibold tracking-tight text-center mb-4">Hear our AI voices</h2>
             <p class="text-sm text-white/40 text-center mb-12 max-w-xl mx-auto">Experience the natural, human-like quality of our AI voice agents. Click to play a sample.</p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Voice 1 - Sarah -->
                 <div class="voice-card group relative p-[1px] rounded-2xl bg-gradient-to-b from-white/10 to-transparent hover:from-purple-500/50 hover:to-rose-500/50 transition-all duration-500 cursor-pointer" onclick="playVoice('sarah')">
                     <div class="relative h-full bg-[#080808] rounded-2xl p-6 overflow-hidden">
@@ -224,7 +224,7 @@
                         </p>
                         <div class="mt-4 flex items-center gap-2">
                             <span class="px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300 text-[10px]">Healthcare</span>
-                            <span class="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 text-[10px]">US English</span>
+                            <span class="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 text-[10px]">English (US)</span>
                         </div>
                     </div>
                     <audio id="audio-sarah" preload="auto">
@@ -251,8 +251,8 @@
                             "Good morning. I'm here to assist you with your appointment. Let me check our available times for you."
                         </p>
                         <div class="mt-4 flex items-center gap-2">
-                            <span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-[10px]">Medical</span>
-                            <span class="px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 text-[10px]">US English</span>
+                            <span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-[10px]">Real Estate</span>
+                            <span class="px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 text-[10px]">English (US)</span>
                         </div>
                     </div>
                     <audio id="audio-james" preload="auto">
@@ -280,11 +280,95 @@
                         </p>
                         <div class="mt-4 flex items-center gap-2">
                             <span class="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 text-[10px]">Support</span>
-                            <span class="px-2 py-0.5 rounded-full bg-orange-500/20 text-orange-300 text-[10px]">UK English</span>
+                            <span class="px-2 py-0.5 rounded-full bg-orange-500/20 text-orange-300 text-[10px]">English (UK)</span>
                         </div>
                     </div>
                     <audio id="audio-emma" preload="auto">
                         <source src="https://cdn.jsdelivr.net/gh/nicerr11/public-audio@main/emma-demo.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <!-- Voice 4 - Sofia (Spanish) -->
+                <div class="voice-card group relative p-[1px] rounded-2xl bg-gradient-to-b from-white/10 to-transparent hover:from-purple-500/50 hover:to-rose-500/50 transition-all duration-500 cursor-pointer" onclick="playVoice('sofia')">
+                    <div class="relative h-full bg-[#080808] rounded-2xl p-6 overflow-hidden">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-amber-500 to-red-500 flex items-center justify-center">
+                                <iconify-icon icon="solar:user-rounded-bold" class="text-white text-xl"></iconify-icon>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-medium text-white">Sofia</h3>
+                                <p class="text-xs text-white/50">Warm & Welcoming</p>
+                            </div>
+                            <button class="ml-auto w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors play-btn" data-voice="sofia">
+                                <iconify-icon icon="solar:play-bold" class="text-white text-lg translate-x-0.5" id="sofia-icon"></iconify-icon>
+                            </button>
+                        </div>
+                        <p class="text-xs text-white/60 leading-relaxed">
+                            "Hola, gracias por llamar. Estoy aqui para ayudarle con su reserva o cualquier pregunta que tenga."
+                        </p>
+                        <div class="mt-4 flex items-center gap-2">
+                            <span class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 text-[10px]">Restaurant</span>
+                            <span class="px-2 py-0.5 rounded-full bg-red-500/20 text-red-300 text-[10px]">Spanish</span>
+                        </div>
+                    </div>
+                    <audio id="audio-sofia" preload="auto">
+                        <source src="voices/sofia-demo.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <!-- Voice 5 - Marco (Italian) -->
+                <div class="voice-card group relative p-[1px] rounded-2xl bg-gradient-to-b from-white/10 to-transparent hover:from-purple-500/50 hover:to-rose-500/50 transition-all duration-500 cursor-pointer" onclick="playVoice('marco')">
+                    <div class="relative h-full bg-[#080808] rounded-2xl p-6 overflow-hidden">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                                <iconify-icon icon="solar:user-rounded-bold" class="text-white text-xl"></iconify-icon>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-medium text-white">Marco</h3>
+                                <p class="text-xs text-white/50">Confident & Articulate</p>
+                            </div>
+                            <button class="ml-auto w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors play-btn" data-voice="marco">
+                                <iconify-icon icon="solar:play-bold" class="text-white text-lg translate-x-0.5" id="marco-icon"></iconify-icon>
+                            </button>
+                        </div>
+                        <p class="text-xs text-white/60 leading-relaxed">
+                            "Buongiorno, grazie per aver chiamato. Come posso aiutarla oggi? Sono qui per assisterla."
+                        </p>
+                        <div class="mt-4 flex items-center gap-2">
+                            <span class="px-2 py-0.5 rounded-full bg-green-500/20 text-green-300 text-[10px]">Legal</span>
+                            <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px]">Italian</span>
+                        </div>
+                    </div>
+                    <audio id="audio-marco" preload="auto">
+                        <source src="voices/marco-demo.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <!-- Voice 6 - Anna (German) -->
+                <div class="voice-card group relative p-[1px] rounded-2xl bg-gradient-to-b from-white/10 to-transparent hover:from-purple-500/50 hover:to-rose-500/50 transition-all duration-500 cursor-pointer" onclick="playVoice('anna')">
+                    <div class="relative h-full bg-[#080808] rounded-2xl p-6 overflow-hidden">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-500 to-amber-500 flex items-center justify-center">
+                                <iconify-icon icon="solar:user-rounded-bold" class="text-white text-xl"></iconify-icon>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-medium text-white">Anna</h3>
+                                <p class="text-xs text-white/50">Clear & Efficient</p>
+                            </div>
+                            <button class="ml-auto w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors play-btn" data-voice="anna">
+                                <iconify-icon icon="solar:play-bold" class="text-white text-lg translate-x-0.5" id="anna-icon"></iconify-icon>
+                            </button>
+                        </div>
+                        <p class="text-xs text-white/60 leading-relaxed">
+                            "Guten Tag, vielen Dank fur Ihren Anruf. Wie kann ich Ihnen heute behilflich sein?"
+                        </p>
+                        <div class="mt-4 flex items-center gap-2">
+                            <span class="px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-300 text-[10px]">Finance</span>
+                            <span class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 text-[10px]">German</span>
+                        </div>
+                    </div>
+                    <audio id="audio-anna" preload="auto">
+                        <source src="voices/anna-demo.mp3" type="audio/mpeg">
                     </audio>
                 </div>
             </div>
@@ -314,11 +398,11 @@
                 <div class="group relative p-[1px] rounded-2xl bg-gradient-to-b from-white/10 to-transparent hover:from-purple-500/50 hover:to-rose-500/50 transition-all duration-500">
                     <div class="relative h-full bg-[#080808] rounded-2xl p-8 overflow-hidden">
                         <div class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-rose-400 group-hover:text-white transition-colors">
-                            <iconify-icon icon="solar:hospital-linear" class="text-xl" stroke-width="1.5"></iconify-icon>
+                            <iconify-icon icon="solar:buildings-linear" class="text-xl" stroke-width="1.5"></iconify-icon>
                         </div>
-                        <h3 class="text-lg font-medium text-white mb-2">Healthcare Ready</h3>
+                        <h3 class="text-lg font-medium text-white mb-2">Built for Every Industry</h3>
                         <p class="text-sm text-white/50 leading-relaxed">
-                            Purpose-built for clinics and medical practices. Schedule appointments, handle patient inquiries, and more.
+                            From healthcare to real estate, restaurants to law firms. We customize AI voice agents for any business niche.
                         </p>
                     </div>
                 </div>
@@ -342,7 +426,7 @@
         <section id="services" class="max-w-6xl mx-auto px-6 mt-32">
             <h2 class="text-3xl font-semibold tracking-tight text-center mb-4">Our Services</h2>
             <p class="text-sm text-white/40 text-center mb-12 max-w-2xl mx-auto">
-                VoiceOps is an AI voice agency that brings cutting-edge voice assistant technology to healthcare providers, clinics, dental offices, and businesses that need reliable 24/7 customer communication. We handle the entire process from setup to deployment.
+                VoiceOps is an AI voice agency that brings cutting-edge voice assistant technology to every business that needs reliable 24/7 customer communication - from healthcare and real estate to restaurants, law firms, and beyond. We handle the entire process from setup to deployment.
             </p>
 
             <div class="relative rounded-3xl border border-white/10 bg-[#080808] overflow-hidden">
@@ -430,7 +514,7 @@
                     <h2 class="text-3xl font-semibold tracking-tight mb-6">About VoiceOps</h2>
                     <div class="space-y-4 text-sm text-white/60 leading-relaxed">
                         <p>
-                            <span class="text-white font-medium">VoiceOps</span> is an AI voice agency dedicated to bringing intelligent voice assistant technology to businesses that need it most. We specialize in healthcare, dental practices, clinics, and professional services.
+                            <span class="text-white font-medium">VoiceOps</span> is an AI voice agency dedicated to bringing intelligent voice assistant technology to businesses of all types and sizes - from healthcare clinics and dental practices to real estate agencies, restaurants, law firms, and service businesses.
                         </p>
                         <p>
                             We understand that missed calls mean missed opportunities. That's why we've built a service that ensures your customers always reach a helpful, professional voice - whether it's 2 PM or 2 AM.
@@ -457,7 +541,7 @@
                                 </div>
                             </div>
                             <p class="text-sm text-white/60 leading-relaxed">
-                                To empower clinics, healthcare providers, and businesses with AI voice technology that improves customer experience, reduces missed calls, and frees up staff to focus on what matters most - serving their clients.
+                                To empower businesses of all sizes and industries with AI voice technology that improves customer experience, reduces missed calls, and frees up staff to focus on what matters most - growing their business and serving their clients.
                             </p>
                             <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
                                 <div>
@@ -499,9 +583,10 @@
                 </div>
                 <div class="flex flex-col gap-3">
                     <h4 class="text-xs font-semibold text-white">Industries</h4>
-                    <a href="#" class="text-xs text-white/50 hover:text-white transition-colors">Healthcare</a>
-                    <a href="#" class="text-xs text-white/50 hover:text-white transition-colors">Dental</a>
-                    <a href="#" class="text-xs text-white/50 hover:text-white transition-colors">Professional Services</a>
+                    <a href="#" class="text-xs text-white/50 hover:text-white transition-colors">Healthcare & Dental</a>
+                    <a href="#" class="text-xs text-white/50 hover:text-white transition-colors">Real Estate</a>
+                    <a href="#" class="text-xs text-white/50 hover:text-white transition-colors">Restaurants & Hospitality</a>
+                    <a href="#" class="text-xs text-white/50 hover:text-white transition-colors">Law & Professional Services</a>
                 </div>
                 <div class="flex flex-col gap-3">
                     <h4 class="text-xs font-semibold text-white">Legal</h4>
@@ -511,7 +596,7 @@
             </div>
         </div>
         <div class="max-w-6xl mx-auto px-6 mt-12 pt-8 border-t border-white/5 flex justify-between items-center">
-            <p class="text-[10px] text-white/20">© 2025 VoiceOps Agency. All rights reserved.</p>
+            <p class="text-[10px] text-white/20">© 2026 VoiceOps Agency. All rights reserved.</p>
             <div class="flex gap-4">
                 <iconify-icon icon="mdi:linkedin" class="text-white/20 hover:text-white transition-colors cursor-pointer"></iconify-icon>
                 <iconify-icon icon="mdi:twitter" class="text-white/20 hover:text-white transition-colors cursor-pointer"></iconify-icon>
@@ -529,7 +614,20 @@
         const voiceTexts = {
             sarah: "Hi there! Thank you for calling. I'd be happy to help you schedule an appointment or answer any questions you might have.",
             james: "Good morning. I'm here to assist you with your appointment. Let me check our available times for you.",
-            emma: "Hello! I completely understand. Let me help you find the best solution for your needs today."
+            emma: "Hello! I completely understand. Let me help you find the best solution for your needs today.",
+            sofia: "Hola, gracias por llamar. Estoy aqui para ayudarle con su reserva o cualquier pregunta que tenga.",
+            marco: "Buongiorno, grazie per aver chiamato. Come posso aiutarla oggi? Sono qui per assisterla.",
+            anna: "Guten Tag, vielen Dank fur Ihren Anruf. Wie kann ich Ihnen heute behilflich sein?"
+        };
+
+        // Language mappings for voices
+        const voiceLangs = {
+            sarah: 'en-US',
+            james: 'en-US',
+            emma: 'en-GB',
+            sofia: 'es-ES',
+            marco: 'it-IT',
+            anna: 'de-DE'
         };
 
         function playVoice(voice) {
@@ -573,18 +671,21 @@
 
                 const utterance = new SpeechSynthesisUtterance(voiceTexts[voice]);
                 utterance.rate = 0.9;
-                utterance.pitch = voice === 'james' ? 0.8 : 1.1;
+                utterance.pitch = (voice === 'james' || voice === 'marco') ? 0.8 : 1.1;
 
-                // Try to get a good voice
+                // Get the target language for this voice
+                const targetLang = voiceLangs[voice] || 'en-US';
+
+                // Try to get a voice that matches the language
                 const voices = window.speechSynthesis.getVoices();
-                const preferredVoice = voices.find(v =>
-                    v.lang.startsWith('en') &&
-                    (voice === 'james' ? v.name.toLowerCase().includes('male') : v.name.toLowerCase().includes('female'))
-                ) || voices.find(v => v.lang.startsWith('en'));
+                const preferredVoice = voices.find(v => v.lang === targetLang) ||
+                    voices.find(v => v.lang.startsWith(targetLang.split('-')[0])) ||
+                    voices.find(v => v.lang.startsWith('en'));
 
                 if (preferredVoice) {
                     utterance.voice = preferredVoice;
                 }
+                utterance.lang = targetLang;
 
                 currentVoice = voice;
                 updateIcon(voice, 'pause');
